@@ -8,12 +8,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
 import { PlacesPage } from '../pages/places/places';
 import { CollectionsPage } from '../pages/collections/collections';
-
 import { LocalPage } from '../pages/local/local';
 import { LocalGalleryPage } from '../pages/local-gallery/local-gallery';
 import { LocalSlidePage } from '../pages/local-slide/local-slide';
-
 import { SearchPage } from '../pages/search/search';
+import { CategoryPage } from '../pages/category/category';
 
 @NgModule({
   declarations: [
@@ -27,6 +26,7 @@ import { SearchPage } from '../pages/search/search';
     LocalGalleryPage,
     LocalSlidePage,
     SearchPage,
+    CategoryPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -42,6 +42,7 @@ import { SearchPage } from '../pages/search/search';
     LocalGalleryPage,
     LocalSlidePage,
     SearchPage,
+    CategoryPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
