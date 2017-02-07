@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
+import { PlacesPage } from '../pages/places/places';
 import { CollectionsPage } from '../pages/collections/collections';
 
 @NgModule({
@@ -11,6 +12,7 @@ import { CollectionsPage } from '../pages/collections/collections';
     MyApp,
     TabsPage,
     HomePage,
+    PlacesPage,
     CollectionsPage,
   ],
   imports: [
@@ -21,6 +23,7 @@ import { CollectionsPage } from '../pages/collections/collections';
     MyApp,
     TabsPage,
     HomePage,
+    PlacesPage,
     CollectionsPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
