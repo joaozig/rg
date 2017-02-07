@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
+import { LocalPage } from '../local/local';
+
 @Component({
   selector: 'page-places',
   templateUrl: 'places.html'
@@ -17,9 +19,9 @@ export class PlacesPage {
 
   constructor(private navCtrl: NavController) { }
 
-  // openPage(item) {
-  //   this.navCtrl.push(LocalsPage);
-  // }
+  openPage(item) {
+    this.navCtrl.push(LocalPage);
+  }
 
   // openSearch() {
   //   this.navCtrl.push(SearchPage);

@@ -9,6 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { PlacesPage } from '../pages/places/places';
 import { CollectionsPage } from '../pages/collections/collections';
 
+import { LocalPage } from '../pages/local/local';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -17,6 +19,7 @@ import { CollectionsPage } from '../pages/collections/collections';
     HomePage,
     PlacesPage,
     CollectionsPage,
+    LocalPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -28,6 +31,7 @@ import { CollectionsPage } from '../pages/collections/collections';
     HomePage,
     PlacesPage,
     CollectionsPage,
+    LocalPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
