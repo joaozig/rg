@@ -14,3 +14,13 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.ion-content-theme {
+  background-color: #EEE !important;
+}
+
+$img-border-radius: 3px;
+.img-border-radius {
+  -webkit-border-radius: $img-border-radius;
+  -moz-border-radius: $img-border-radius;
+  border-radius: $img-border-radius;
+}
