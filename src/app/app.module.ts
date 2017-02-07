@@ -13,6 +13,8 @@ import { LocalPage } from '../pages/local/local';
 import { LocalGalleryPage } from '../pages/local-gallery/local-gallery';
 import { LocalSlidePage } from '../pages/local-slide/local-slide';
 
+import { SearchPage } from '../pages/search/search';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -24,6 +26,7 @@ import { LocalSlidePage } from '../pages/local-slide/local-slide';
     LocalPage,
     LocalGalleryPage,
     LocalSlidePage,
+    SearchPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -38,6 +41,7 @@ import { LocalSlidePage } from '../pages/local-slide/local-slide';
     LocalPage,
     LocalGalleryPage,
     LocalSlidePage,
+    SearchPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

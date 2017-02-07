@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-searchbar color="primary" placeholder="Search here"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="ion-content-dark">
+
+  <ion-scroll style="height: 220px;" scrollX="true" scrollY="false">
+    <div [style.width]="widthHighlights" [style.margin]="marginHighlights">
+      <div class="wrapper" style="border-radius: 2px; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); display: inline-block; width: 300px; height: 200px; margin-right: 10px" *ngFor="let highlight of highlights">
+        <img style="height: 200px; border-radius: 2px;" [src]="highlight.img">
+        <div class="overlay"></div>
+        <div style="display: inline">
+          <span class="title">
+            <img style="height: 40px; margin-right:5px; border-radius: 50%;" *ngIf="highlight.logo" [src]="highlight.logo">
+            {{ highlight.title }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </ion-scroll>
+
+  <ion-list>
+    <button ion-item *ngFor="let category of categories" (click)="categorySelected(category)">
+      {{ category.name }}
+    </button>  
+  </ion-list>
+
+</ion-content>
