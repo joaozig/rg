@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
+import { LocalGalleryPage } from '../local-gallery/local-gallery';
+
 @Component({
   selector: 'page-local',
   templateUrl: 'local.html'
@@ -35,6 +37,6 @@ export class LocalPage {
   }
 
   openGallery() {
-    // this.navCtrl.push(LocalsGalleryPage);
+    this.navCtrl.push(LocalGalleryPage);
   }
 }

@@ -1,0 +1,15 @@
+page-local-slide {
+
+  $transparency: 0.8;
+  .modal-bg-transparency {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  button {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .no-scroll .scroll-content{
+    overflow: hidden;
+  }
+}
