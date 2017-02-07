@@ -2,6 +2,8 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { OrderByPipe } from '../pipes/order-by';
+
 import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
 import { PlacesPage } from '../pages/places/places';
@@ -10,6 +12,7 @@ import { CollectionsPage } from '../pages/collections/collections';
 @NgModule({
   declarations: [
     MyApp,
+    OrderByPipe,
     TabsPage,
     HomePage,
     PlacesPage,
