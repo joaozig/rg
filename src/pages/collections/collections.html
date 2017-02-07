@@ -1,96 +1,28 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>Favoritos</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="ion-content-theme">
+
   <ion-fab right bottom>
     <button ion-fab mini><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
-  <h2 padding-left>Favoritos</h2>
-  
-  <ion-list>
+  <ion-list padding-top>
 
-    <button ion-item>
+    <button ion-item (click)="openCollection(collection)" *ngFor="let collection of collections">
       <ion-avatar item-left>
-        <img src="https://instagram.frec5-1.fna.fbcdn.net/t51.2885-19/s150x150/15251678_1816826701899029_2229997361394876416_a.jpg">
+        <img [src]="collection.img">
       </ion-avatar>
-      <h2>Para encomendar</h2>
-      <p>3 itens</p>
-    </button>
-
-    <button ion-item>
-      <ion-avatar item-left>
-        <img src="https://instagram.frec5-1.fna.fbcdn.net/t51.2885-19/s150x150/12724968_1083958931647692_555246287_a.jpg">
-      </ion-avatar>
-      <h2>Sushis</h2>
-      <p>6 itens</p>
-    </button>
-
-    <button ion-item>
-      <ion-avatar item-left>
-        <img src="https://instagram.frec5-1.fna.fbcdn.net/t51.2885-19/s150x150/15251678_1816826701899029_2229997361394876416_a.jpg">
-      </ion-avatar>
-      <h2>Para encomendar</h2>
-      <p>3 itens</p>
-    </button>
-
-    <button ion-item>
-      <ion-avatar item-left>
-        <img src="https://instagram.frec5-1.fna.fbcdn.net/t51.2885-19/s150x150/12724968_1083958931647692_555246287_a.jpg">
-      </ion-avatar>
-      <h2>Sushis</h2>
-      <p>6 itens</p>
-    </button>
-
-    <button ion-item>
-      <ion-avatar item-left>
-        <img src="https://instagram.frec5-1.fna.fbcdn.net/t51.2885-19/s150x150/15251678_1816826701899029_2229997361394876416_a.jpg">
-      </ion-avatar>
-      <h2>Para encomendar</h2>
-      <p>3 itens</p>
-    </button>
-
-    <button ion-item>
-      <ion-avatar item-left>
-        <img src="https://instagram.frec5-1.fna.fbcdn.net/t51.2885-19/s150x150/12724968_1083958931647692_555246287_a.jpg">
-      </ion-avatar>
-      <h2>Sushis</h2>
-      <p>6 itens</p>
-    </button>
-
-    <button ion-item>
-      <ion-avatar item-left>
-        <img src="https://instagram.frec5-1.fna.fbcdn.net/t51.2885-19/s150x150/15251678_1816826701899029_2229997361394876416_a.jpg">
-      </ion-avatar>
-      <h2>Para encomendar</h2>
-      <p>3 itens</p>
-    </button>
-
-    <button ion-item>
-      <ion-avatar item-left>
-        <img src="https://instagram.frec5-1.fna.fbcdn.net/t51.2885-19/s150x150/12724968_1083958931647692_555246287_a.jpg">
-      </ion-avatar>
-      <h2>Sushis</h2>
-      <p>6 itens</p>
-    </button>
-
-    <button ion-item>
-      <ion-avatar item-left>
-        <img src="https://instagram.frec5-1.fna.fbcdn.net/t51.2885-19/s150x150/15251678_1816826701899029_2229997361394876416_a.jpg">
-      </ion-avatar>
-      <h2>Para encomendar</h2>
-      <p>3 itens</p>
-    </button>
-
-    <button ion-item>
-      <ion-avatar item-left>
-        <img src="https://instagram.frec5-1.fna.fbcdn.net/t51.2885-19/s150x150/12724968_1083958931647692_555246287_a.jpg">
-      </ion-avatar>
-      <h2>Sushis</h2>
-      <p>6 itens</p>
+      <h2>{{collection.name}}</h2>
+      <p>{{collection.collections.length}} {{collection.collections.length == 1 ? 'item' : 'itens'}}</p>
     </button>
 
   </ion-list>

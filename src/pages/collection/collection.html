@@ -1,15 +1,20 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>Temakerias</ion-title>
+    <ion-title>Para visitar</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="ion-content-theme list-cards">
 
-  <ion-card *ngFor="let i of [1, 2, 3, 4]" (click)="cardClicked()">
+  <ion-card *ngFor="let i of [1, 2, 3, 4]">
     <div class="wrapper" style="height: 200px;">
-      <button style="right: 0;position: absolute; width: 30px; height: 30px; margin-right: 10px; margin-top: 10px; z-index: 10;" (click)="showConsole()">
-        <ion-icon style="color: white; font-size: 1.7em;" name="add"></ion-icon>
+      <button style="background-color: green; right: 0;position: absolute; width: 30px; height: 30px; margin-right: 10px; margin-top: 10px; z-index: 10;">
+        <ion-icon style="color: white; font-size: 1.7em;" name="checkmark"></ion-icon>
       </button>
       <img style="position: absolute; top:0; left: 0; margin-top: 10px; margin-left: 10px; height: 40px; margin-right:5px; border-radius: 50%;" src="https://instagram.ffor2-1.fna.fbcdn.net/t51.2885-19/s150x150/14659416_862560453880389_7502452811137810432_a.jpg">
       <img style="height: 200px; width: 100%;" *ngIf="i != 1" src="https://instagram.ffor2-1.fna.fbcdn.net/t51.2885-15/s750x750/sh0.08/e35/16123611_1744942792488853_6340669135436906496_n.jpg?ig_cache_key=MTQzMDc5ODk3MzUzNDI4NDM3Nw%3D%3D.2">
@@ -29,29 +34,5 @@
       </div>
     </div>
   </ion-card>
-
-  <ion-list>
-
-    <button ion-item>
-      Coni Móvel Temakeria
-    </button>
-
-    <button ion-item>
-      Go! Temakeria Express
-    </button>
-
-    <button ion-item>
-      Real Temakeria
-    </button>
-
-    <button ion-item>
-      Temix Japa Food
-    </button>
-
-    <button ion-item>
-      Towerconi
-    </button>
-
-  </ion-list>
 
 </ion-content>

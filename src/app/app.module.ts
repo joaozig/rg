@@ -8,6 +8,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { HomePage } from '../pages/home/home';
 import { PlacesPage } from '../pages/places/places';
 import { CollectionsPage } from '../pages/collections/collections';
+import { CollectionPage } from '../pages/collection/collection';
 import { LocalPage } from '../pages/local/local';
 import { LocalGalleryPage } from '../pages/local-gallery/local-gallery';
 import { LocalSlidePage } from '../pages/local-slide/local-slide';
@@ -22,6 +23,7 @@ import { CategoryPage } from '../pages/category/category';
     HomePage,
     PlacesPage,
     CollectionsPage,
+    CollectionPage,
     LocalPage,
     LocalGalleryPage,
     LocalSlidePage,
@@ -38,6 +40,7 @@ import { CategoryPage } from '../pages/category/category';
     HomePage,
     PlacesPage,
     CollectionsPage,
+    CollectionPage,
     LocalPage,
     LocalGalleryPage,
     LocalSlidePage,
