@@ -10,6 +10,8 @@ import { PlacesPage } from '../pages/places/places';
 import { CollectionsPage } from '../pages/collections/collections';
 
 import { LocalPage } from '../pages/local/local';
+import { LocalGalleryPage } from '../pages/local-gallery/local-gallery';
+import { LocalSlidePage } from '../pages/local-slide/local-slide';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { LocalPage } from '../pages/local/local';
     PlacesPage,
     CollectionsPage,
     LocalPage,
+    LocalGalleryPage,
+    LocalSlidePage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -32,6 +36,8 @@ import { LocalPage } from '../pages/local/local';
     PlacesPage,
     CollectionsPage,
     LocalPage,
+    LocalGalleryPage,
+    LocalSlidePage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

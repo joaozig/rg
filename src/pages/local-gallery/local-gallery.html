@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Food Park Nas Ubaias</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="ion-content-dark">
+
+  <ion-grid>
+    <ion-row *ngFor="let r of [1, 2, 3]">
+      <ion-col *ngFor="let c of [1, 2, 3]" (click)="openSlide()">
+        <img width="100%" src="http://lorempixel.com/400/400/food/{{c}}/" class="img-border-radius">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
