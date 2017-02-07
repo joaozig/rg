@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { LocalPage } from '../local/local';
+import { SearchPage } from '../search/search';
 
 @Component({
   selector: 'page-places',
@@ -23,7 +24,7 @@ export class PlacesPage {
     this.navCtrl.push(LocalPage);
   }
 
-  // openSearch() {
-  //   this.navCtrl.push(SearchPage);
-  // }
+  openSearch() {
+    this.navCtrl.push(SearchPage);
+  }
 }

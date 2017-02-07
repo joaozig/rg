@@ -24,3 +24,41 @@ $img-border-radius: 3px;
   -moz-border-radius: $img-border-radius;
   border-radius: $img-border-radius;
 }
+
+.wrapper {
+  position: relative;
+  background-color: white;
+}
+
+.wrapper .title {
+  bottom: 0;
+  color: white;
+  font-size: 2.2rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+  left: 0;
+  padding-left: 10px;
+  position: absolute;
+  font-weight: bold;
+  align-items:center;
+}
+
+.wrapper .gallery {
+  bottom: 0;
+  color: white;
+  margin-bottom: 1rem;
+  right: 0;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  position: absolute;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 65%, rgba(0,0,0,0.6));
+}
