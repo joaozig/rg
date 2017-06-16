@@ -11,5 +11,7 @@ export class FranchisePage {
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams) { }
+    public navParams: NavParams) {
+      this.franchise = navParams.get('franchise');
+    }
 }

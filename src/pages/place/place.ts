@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { LocalGalleryPage } from '../local-gallery/local-gallery';
 
@@ -9,6 +9,8 @@ import { LocalGalleryPage } from '../local-gallery/local-gallery';
   templateUrl: 'place.html'
 })
 export class PlacePage {
+
+  place: any;
 
   public hiddenOpeningHours: boolean = true;
   public restaurants: any = [
@@ -30,7 +32,11 @@ export class PlacePage {
     {name: "Cachaçaria Sindicato", slogan: 'Cachaças e Drinks', img: 'https://instagram.ffor2-1.fna.fbcdn.net/t51.2885-19/s150x150/14278982_1097108760384532_225118058_a.jpg'},
   ];
 
-  constructor(private navCtrl: NavController) { }
+  constructor(
+    private navCtrl: NavController,
+    private navParams: NavParams) {
+      this.place = navParams.get('place');
+    }
 
   toggleOpeningHours() {
     this.hiddenOpeningHours = !this.hiddenOpeningHours; 

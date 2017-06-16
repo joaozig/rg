@@ -11,5 +11,7 @@ export class RestaurantPage {
 
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams) { }
+    public navParams: NavParams) {
+      this.restaurant = navParams.get('restaurant');
+    }
 }

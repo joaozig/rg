@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-category',
@@ -8,7 +8,13 @@ import { NavController } from 'ionic-angular';
 })
 export class CategoryPage {
 
-  constructor(private navCtrl: NavController) { }
+  category: any;
+
+  constructor(
+    private navCtrl: NavController,
+    private navParams: NavParams) {
+      this.category = navParams.get('category');
+    }
 
   showConsole() {
     event.preventDefault();

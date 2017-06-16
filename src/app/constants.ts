@@ -1,0 +1,1 @@
+export let API_URL = 'http://192.168.25.4:3000/api'

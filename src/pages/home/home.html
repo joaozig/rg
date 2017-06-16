@@ -11,9 +11,30 @@
 
 <ion-content class="ion-content-theme">
 
-  <h2 padding-left>Qual é a boa?</h2>
-  <ion-card *ngFor="let i of [1, 2, 3, 4, 5]">
-    <img src="http://lorempixel.com/500/300/food/{{i}}/">
+  <ion-spinner class="center-spinner" *ngIf="showLoading"></ion-spinner>
+
+  <div (click)="reload()" [hidden]="!showReload" class="center-reload">
+    <ion-icon color="reload" class="center" name="refresh"></ion-icon>
+    <br />
+    <span ion-text color="reload">Falha ao carregar o conteúdo.<br />Clique para tentar novamente.</span>
+  </div>
+
+  <ion-card
+    *ngFor="let highlight of highlights"
+    (click)="openHighlight(highlight)"
+    [hidden]="!showContent">
+
+    <div class="wrapper" style="height: 200px;">
+      <img class="highlight-image" [src]="highlight.image_url">
+      <div class="overlay"></div>
+      <div>
+        <span class="title">
+          <span class="highlight-title">{{highlight.title}}</span>
+          <br>
+          <span class="highlight-headline">{{highlight.headline}}</span>
+        </span>
+      </div>
+    </div>
   </ion-card>
 
 </ion-content>

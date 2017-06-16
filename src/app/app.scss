@@ -31,13 +31,15 @@ $img-border-radius: 3px;
 }
 
 .wrapper .title {
+  text-align: center;
   bottom: 0;
   color: white;
-  font-size: 2.2rem;
+  // font-size: 2.2rem;
   margin-top: 1.6rem;
   margin-bottom: 1rem;
   left: 0;
   padding-left: 10px;
+  padding-right: 10px;
   position: absolute;
   font-weight: bold;
   align-items:center;
@@ -60,7 +62,7 @@ $img-border-radius: 3px;
   height: 100%;
   width: 100%;
   bottom: 0;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 65%, rgba(0,0,0,0.6));
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,0.6));
 }
 
 .list-cards {
@@ -101,5 +103,36 @@ $img-border-radius: 3px;
   .close {
     // background-color: red;
     background-color: #AC0202;
+  }
+}
+
+.center {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.center-spinner {
+  color: grey;
+  margin: auto;
+  padding-top: 20px;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  text-align: center;
+}
+
+.center-reload {
+  color: grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+
+  ion-icon {
+    font-size: 5.5rem;
   }
 }
