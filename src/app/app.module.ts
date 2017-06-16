@@ -16,7 +16,7 @@ import { RestaurantPage } from '../pages/restaurant/restaurant';
 import { PlacesPage } from '../pages/places/places';
 import { CollectionsPage } from '../pages/collections/collections';
 import { CollectionPage } from '../pages/collection/collection';
-import { LocalPage } from '../pages/local/local';
+import { PlacePage } from '../pages/place/place';
 import { LocalGalleryPage } from '../pages/local-gallery/local-gallery';
 import { LocalSlidePage } from '../pages/local-slide/local-slide';
 import { SearchPage } from '../pages/search/search';
@@ -31,10 +31,10 @@ import { CategoryPage } from '../pages/category/category';
     HighlightPage,
     FranchisePage,
     RestaurantPage,
+    PlacePage,
     PlacesPage,
     CollectionsPage,
     CollectionPage,
-    LocalPage,
     LocalGalleryPage,
     LocalSlidePage,
     SearchPage,
@@ -54,10 +54,10 @@ import { CategoryPage } from '../pages/category/category';
     HighlightPage,
     FranchisePage,
     RestaurantPage,
+    PlacePage,
     PlacesPage,
     CollectionsPage,
     CollectionPage,
-    LocalPage,
     LocalGalleryPage,
     LocalSlidePage,
     SearchPage,

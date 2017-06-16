@@ -5,10 +5,10 @@ import { NavController } from 'ionic-angular';
 import { LocalGalleryPage } from '../local-gallery/local-gallery';
 
 @Component({
-  selector: 'page-local',
-  templateUrl: 'local.html'
+  selector: 'page-place',
+  templateUrl: 'place.html'
 })
-export class LocalPage {
+export class PlacePage {
 
   public hiddenOpeningHours: boolean = true;
   public restaurants: any = [
