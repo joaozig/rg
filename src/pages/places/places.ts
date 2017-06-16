@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
-import { LocalPage } from '../local/local';
+import { PlacePage } from '../place/place';
 import { SearchPage } from '../search/search';
 
 @Component({
@@ -21,7 +21,7 @@ export class PlacesPage {
   constructor(private navCtrl: NavController) { }
 
   openPage(item) {
-    this.navCtrl.push(LocalPage);
+    this.navCtrl.push(PlacePage);
   }
 
   openSearch() {
