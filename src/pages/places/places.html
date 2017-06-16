@@ -13,39 +13,18 @@
 </ion-header>
 
 <ion-content class="ion-content-theme">
-  <div padding>
-    <ion-segment [(ngModel)]="typeSegment">
-      <ion-segment-button value="categories">
-        Categorias
-      </ion-segment-button>
-      <ion-segment-button value="locals">
-        Locais
-      </ion-segment-button>
-    </ion-segment>
-  </div>
 
-  <div [ngSwitch]="typeSegment">
+  <ion-list>
+    <button ion-item (click)="openPage(local)" *ngFor="let local of locals | orderBy">
+      <ion-avatar item-left>
+        <img [src]="local.img">
+      </ion-avatar>
+      <h2>{{ local.name }}</h2>
 
-    <ion-grid class="ion-grid-padding" *ngSwitchCase="'categories'">
-      <ion-row class="ion-row">
-        <ion-col width-50 *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8]" class="ion-col">
-          <img width="100%" src="http://lorempixel.com/400/400/food/{{i}}/" class="img-border-radius">
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <ion-list *ngSwitchCase="'locals'">
-      <button ion-item (click)="openPage(local)" *ngFor="let local of locals | orderBy">
-        <ion-avatar item-left>
-          <img [src]="local.img">
-        </ion-avatar>
-        <h2>{{ local.name }}</h2>
-
-        <ion-note item-right>
-        ~ {{ local.distanciaText }}
-        </ion-note>
-      </button>
-    </ion-list>
-  </div>
+      <ion-note item-right>
+      ~ {{ local.distanciaText }}
+      </ion-note>
+    </button>
+  </ion-list>
 
 </ion-content>

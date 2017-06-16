@@ -20,6 +20,7 @@ import { PlacePage } from '../pages/place/place';
 import { LocalGalleryPage } from '../pages/local-gallery/local-gallery';
 import { LocalSlidePage } from '../pages/local-slide/local-slide';
 import { SearchPage } from '../pages/search/search';
+import { CategoriesPage } from '../pages/categories/categories';
 import { CategoryPage } from '../pages/category/category';
 
 @NgModule({
@@ -38,6 +39,7 @@ import { CategoryPage } from '../pages/category/category';
     LocalGalleryPage,
     LocalSlidePage,
     SearchPage,
+    CategoriesPage,
     CategoryPage,
   ],
   imports: [
@@ -61,6 +63,7 @@ import { CategoryPage } from '../pages/category/category';
     LocalGalleryPage,
     LocalSlidePage,
     SearchPage,
+    CategoriesPage,
     CategoryPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
