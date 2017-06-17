@@ -14,16 +14,29 @@
 
 <ion-content class="ion-content-theme">
 
-  <ion-list>
-    <button ion-item (click)="openPage(local)" *ngFor="let local of locals | orderBy">
-      <ion-avatar item-left>
-        <img [src]="local.img">
-      </ion-avatar>
-      <h2>{{ local.name }}</h2>
+  <ion-spinner class="center-spinner" *ngIf="showLoading"></ion-spinner>
 
-      <ion-note item-right>
+  <div (click)="reload()" [hidden]="!showReload" class="center-reload">
+    <ion-icon color="reload" class="center" name="refresh"></ion-icon>
+    <br />
+    <span ion-text color="reload">Falha ao carregar o conteúdo.<br />Clique para tentar novamente.</span>
+  </div>
+
+  <ion-list [hidden]="!showContent">
+    <!--<button ion-item (click)="openPage(local)" *ngFor="let local of locals | orderBy">-->
+    <button 
+      ion-item 
+      (click)="openPlace(place)"
+      *ngFor="let place of places">
+
+      <ion-avatar item-left>
+        <img [src]="place.logo_url">
+      </ion-avatar>
+      <h2>{{ place.name }}</h2>
+
+      <!--<ion-note item-right>
       ~ {{ local.distanciaText }}
-      </ion-note>
+      </ion-note>-->
     </button>
   </ion-list>
 

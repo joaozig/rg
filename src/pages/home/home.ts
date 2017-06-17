@@ -31,6 +31,10 @@ export class HomePage {
     this._loadData();
   }
 
+  reload() {
+    this._loadData();
+  }
+
   openSearch() {
     this.navCtrl.push(SearchPage);
   }

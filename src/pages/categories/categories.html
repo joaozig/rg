@@ -22,7 +22,7 @@
     <span ion-text color="reload">Falha ao carregar o conteúdo.<br />Clique para tentar novamente.</span>
   </div>
 
-  <ion-grid class="ion-grid-padding">
+  <ion-grid class="ion-grid-padding" [hidden]="!showContent">
     <ion-row class="ion-row">
       <ion-col
         col-6
