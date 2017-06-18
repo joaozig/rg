@@ -14,17 +14,16 @@ page-place {
     height: 100px;
   }
 
-  #opening-hours { 
-    ion-row:nth-child(odd) {
-      background-color: #f4f4f4;
-    }
+  .uber-button {
+    margin: 0 10px 10px 10px;
+  }
 
-    ion-col {
-      font-size: 14px;
-    }
+  .opening-hours { 
+    color: grey;
+    padding: 5px 15px;
 
-    ion-col.day {
-      font-weight: bold;
+    .hour {
+      float: right;
     }
   }
 
@@ -37,4 +36,134 @@ page-place {
     margin: 10px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
+
+  .place-logo {
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 60px;
+    margin-right:5px;
+    border-radius: 50%;
+  }
+
+  .place-image {
+    height: 200px;
+    width: 100%;
+  }
+
+  .place-name {
+    font-size: 22px;
+  }
+
+  .section-title {
+    color: grey;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 5px 15px;
+  }
+
+  .description {
+   white-space: pre-line;
+   background-color: white;
+   color: #606060;
+   padding: 0 15px 15px 15px;
+  }
+
+  .address {
+    text-align:center;
+    color: #606060;
+    margin: 10px 0;
+  }
+
+  .current-day {
+    background-color: #efefef;
+  }
+
+  .food-box {
+    background-color: #efefef;
+    color: grey;
+    margin-top: 10px;
+  }
+
+  .food-title {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .food-image {
+    height: 200px;
+    width: 100%;
+    vertical-align: middle;
+  }
+
+  .food-price-box {
+    background-color: #7C0024;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+
+    span {
+      float: right;
+    }
+  }
+
+  .food-info {
+    white-space: pre-line;
+    background-color: white;
+    color: #606060;
+    padding: 0 10px 10px 10px;
+  }
+
+  .food-rating-button {
+    padding: 0 10px;
+  }
+
+  .button-ios {
+    text-transform: uppercase;
+  }
+
 }
+
+// page-place {
+//   .header-image {
+//     // background-image: url(https://ununsplash.imgix.net/photo-1421091242698-34f6ad7fc088?fit=crop&fm=jpg&h=650&q=75&w=950);
+//     background-image: url(https://instagram.ffor2-1.fna.fbcdn.net/t51.2885-15/e35/15876354_1220693868014703_2364505648227418112_n.jpg?ig_cache_key=MTQyNjQ3MjIwNjQyNzAxODYwMA%3D%3D.2);
+//     height: 40vh;
+//   }
+  
+//   .main-content {
+//     background-color: white;
+//   }
+
+//   #map {
+//     width: 100%;
+//     height: 100px;
+//   }
+
+//   #opening-hours { 
+//     ion-row:nth-child(odd) {
+//       background-color: #f4f4f4;
+//     }
+
+//     ion-col {
+//       font-size: 14px;
+//     }
+
+//     ion-col.day {
+//       font-weight: bold;
+//     }
+//   }
+
+//   .restaurant-subtitle {
+//     color: grey;
+//     font-size: 12px;
+//   }
+
+//   .box-shadow {
+//     margin: 10px;
+//     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+//   }
+// }

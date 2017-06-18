@@ -4,131 +4,66 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="ion-content-theme">
+<ion-content class="ion-content-theme" style="background-color: white !important">
 
-  <div class="wrapper" style="height: 150px" (click)="openGallery()">
-    <img style="width: 100%; height: 150px;" src="http://www.portaldarmc.com.br/wp-content/uploads/2016/03/food-truck-park-Americana.jpg">
+  <div class="wrapper" style="height: 200px" (click)="openGallery()">
+    <img style="width: 100%; height: 200px;" [src]="place.image_url">
     <div class="overlay"></div>
     <div style="display: inline">
-      <span class="title"><img style="height: 40px; margin-right:5px; border-radius: 50%;" src="https://instagram.ffor2-1.fna.fbcdn.net/t51.2885-15/s320x320/e35/15802904_732653276884908_8284400252174204928_n.jpg?ig_cache_key=MTQyNjQwNTc1NDMzMTU2MjIzOA%3D%3D.2"> Food Park Nas Ubaias</span>
+      <span class="title">
+        <img style="height: 40px; margin-right:5px; border-radius: 50%;" [src]="place.logo_url">
+        {{place.name}}
+      </span>
       <ion-icon class="gallery" ios="md-images" md="md-images"></ion-icon>
     </div>
   </div>
 
-    <!-- Address Map -->
-    <ion-card>
-      <ion-item>
-        <p>Estrada das Ubaias, 456 - Casa Forte <span style="float: right; font-size: 11px;">~ 12.5 Km</span></p>
-      </ion-item>
-      <img src="https://maps.googleapis.com/maps/api/staticmap?center=Estrada+das+ubaias,456,Casa+Forte,Recife&zoom=15&size=400x130&maptype=roadmap&markers=color:red%7Clabel:%7C-8.032149,-34.919608">
+  <!-- Description -->
+  <div class="description">
+    {{place.summary}}
+  </div>
+  <!--/ Description -->
 
-      <ion-item>
-        <!-- Uber Button -->
-        <a ion-button default block color="dark" icon-left href="https://m.uber.com/ul/?client_id=tGQeLkvrxnm4KicaOCE_8gvzQ6TPeS6i&action=setPickup&pickup=my_location&dropoff[latitude]=-8.032149&dropoff[longitude]=-34.919608&dropoff[nickname]=Ubaias&dropoff[formatted_address]=Estrada%20das%20Ubaias%2C%20456%20-%20Casa%20Forte">
-          <img src="assets/icon/uber-logo.png" style="width: 25px; margin-right: 5px;">
-          Pedir um Uber
-        </a>
-        <!--/ Uber Button -->
-      </ion-item>
-    </ion-card>
-    <!--/ Address Map -->
+  <!-- Address Map -->
+  <img [src]="mapUrl">
+  <div class="address">{{place.address}} - {{place.neighborhood.name}}</div>
+  <div class="uber-button">
+    <a ion-button default block color="dark" icon-left href="https://m.uber.com/ul/?client_id=tGQeLkvrxnm4KicaOCE_8gvzQ6TPeS6i&action=setPickup&pickup=my_location&dropoff[latitude]=-8.032149&dropoff[longitude]=-34.919608&dropoff[nickname]=Ubaias&dropoff[formatted_address]=Estrada%20das%20Ubaias%2C%20456%20-%20Casa%20Forte">
+      <img src="assets/icon/uber-logo.png" style="width: 25px; margin-right: 5px;">
+      Pedir um Uber
+    </a>
+  </div>
+  <hr />
+  <!--/ Address Map -->
 
+  <!-- Schedules -->
+  <div class="section-title">Horário de Funcionamento</div>
+  <div
+    class="opening-hours"
+    *ngFor="let schedule of place.schedules"
+    [ngClass]="{'current-day': schedule.day == today}">
 
-    <!-- Opening Hours -->
-    <ion-card>
-      <ion-item-group>
-        <ion-item-divider color="light" style="color: green;" (click)="toggleOpeningHours()">
-          <ion-icon ios="md-time" md="md-time"></ion-icon> Aberto até às 23h
-          <ion-icon [hidden]="!hiddenOpeningHours" ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
-          <ion-icon [hidden]="hiddenOpeningHours" ios="ios-arrow-up" md="ios-arrow-up"></ion-icon>
-        </ion-item-divider>
+    <span>{{ schedule.day_of_week }}</span>
+    <span class="hour">{{ schedule.operating_hour }}</span>
+  </div>
+  <hr />
+  <!--/ Schedules -->
 
-        <ion-item [hidden]="hiddenOpeningHours">
-          <ion-grid id="opening-hours">
-            <ion-row>
-              <ion-col class="day">Segunda-feira</ion-col>
-              <ion-col>Fechado</ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="day">Terça-feira</ion-col>
-              <ion-col>10h às 22h</ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="day">Quarta-feira</ion-col>
-              <ion-col>10h às 22h</ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="day">Quinta-feira</ion-col>
-              <ion-col>10h às 22h</ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="day">Sexta-feira</ion-col>
-              <ion-col>10h às 22h</ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="day">Sábado</ion-col>
-              <ion-col>10h às 22h</ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="day">Domingo</ion-col>
-              <ion-col>10h às 22h</ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-item>
-      </ion-item-group>
-    </ion-card>
-    <!--/ Opening Hours -->
+  <!--Restaurants -->
+  <div class="section-title">Unidades</div>
 
-    <!-- Informations -->
-    <ion-item-group class="box-shadow">
-      <ion-item-divider color="grey">
-        <ion-icon item-left name="information-circle" color="primary"></ion-icon>
-        <b ion-text color="primary">Informações Gerais</b>
-      </ion-item-divider>
+  <button
+    ion-item
+    *ngFor="let restaurant of place.restaurants"
+    (click)="openRestaurant(restaurant)">
 
-      <ion-item>
-        <ion-icon item-left ios="ios-call" md="ios-call"></ion-icon> (81) 3333-2456 
-      </ion-item>
+    <ion-avatar item-left>
+      <img [src]="restaurant.franchise.logo_url">
+    </ion-avatar>
+    <h4>{{ restaurant.name }}</h4>
+    <span class="restaurant-subtitle">{{ restaurant.slogan }}</span>
 
-      <ion-item>
-        <ion-icon item-left ios="md-car" md="md-car"></ion-icon> Estacionamento: <span style="color: red;">não</span> 
-      </ion-item>
-
-      <ion-item>
-        <ion-icon item-left ios="md-man" md="md-man"></ion-icon> Manobrista: <span style="color: green;">sim</span> 
-      </ion-item>
-
-      <ion-item>
-        <ion-icon item-left ios="md-bicycle" md="md-bicycle"></ion-icon> Bicicletário: <span style="color: green;">sim</span>
-      </ion-item>
-
-      <ion-item>
-        <ion-icon item-left ios="ios-card" md="ios-card"></ion-icon> Aceita cartão: <span style="color: orange;">algumas operações</span> 
-      </ion-item>
-
-      <ion-item>
-        <ion-icon item-left ios="md-kids" md="md-kids"></ion-icon> Área Kids: <span style="color: green;">sim</span>
-      </ion-item>
-
-    </ion-item-group>
-    <!--/ Informations -->
-
-    <!-- Restaurants -->
-    <ion-item-group class="box-shadow">
-      <ion-item-divider color="grey">
-        <ion-icon item-left ios="md-menu" md="md-menu" color="primary"></ion-icon>
-        <b ion-text color="primary">Operações</b>
-      </ion-item-divider>
-
-      <button ion-item *ngFor="let restaurant of restaurants">
-        <ion-avatar item-left>
-          <img [src]="restaurant.img">
-        </ion-avatar>
-        <h2>{{ restaurant.name }}</h2>
-        <span class="restaurant-subtitle">{{ restaurant.slogan }}</span>
-      </button>
-
-    </ion-item-group>
-    <!--/ Restaurants -->
+  </button>
+  <!--/ Restaurants -->
 
 </ion-content>
